@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-navy-900: #0a0b1a;
+  --color-coral-500: #ff7a5c;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bg-navy-900 {
+  background-color: var(--color-navy-900);
+}
+
+.bg-coral-500 {
+  background-color: var(--color-coral-500);
+}
+
+.text-coral-500 {
+  color: var(--color-coral-500);
+}
+
+.border-coral-500 {
+  border-color: var(--color-coral-500);
+}
+
+.focus\:ring-coral-500:focus {
+  --tw-ring-color: var(--color-coral-500);
+}
+
+/* Background pattern */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* Animations */
+@keyframes rotate-y {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(10deg); }
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.rotate-y-10:hover {
+  transform: rotateY(5deg);
+}
+
+/* Form transitions */
+input, button {
+  transition: all 0.2s ease;
+}
+
+input:focus {
+  transform: translateY(-1px);
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.98);
+}
